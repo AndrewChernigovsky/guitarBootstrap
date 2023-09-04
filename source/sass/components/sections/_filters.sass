@@ -1,0 +1,85 @@
+.section-filters
+	background-color: lightblue
+	padding: 35px 0px 75px 0px
+
+	.primary-title,
+	.base-text,
+	.fourth-title,
+	.base-text-small
+		color: white
+
+.breadcrumb
+	list-style-type: none
+	display: inline-block
+
+	&__item
+		a
+			width: 150px
+			height: 150px
+			background: url('../img/sprite.svg#home')
+			background-position: center
+			background-repeat: no-repeat
+			background-size: 150px
+
+.form-filters
+	display: flex
+	justify-content: space-between
+
+	&__buttons
+		display: grid
+		gap: 20px
+
+		.base-button
+			cursor: pointer
+
+.form-fieldset
+	border: none
+	margin: 0
+	padding: 0
+
+	&__wrapper
+		display: grid
+
+	&__inputes
+		margin-bottom: 20px
+
+.cost-range
+	position: relative
+	width: 100%
+
+	&__button
+		width: 20px
+		height: 20px
+		border-radius: 5px
+		border: none
+		background-color: white
+		position: absolute
+		top: -10px
+		z-index: 2
+		cursor: pointer
+		transition: 0.3s ease-in-out
+
+		&:last-of-type
+			left: 50%
+
+		&:hover
+			background-color: lightgray
+
+	&__line
+		display: block
+		width: inherit
+		height: 4px
+		position: absolute
+		top: 0px
+
+
+		&:first-of-type
+			opacity: 0.3
+			background-color: gray
+			z-index: 0
+
+
+		&--active
+			background-color: white
+			width: 55%
+			z-index: 1

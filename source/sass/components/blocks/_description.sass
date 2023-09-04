@@ -1,0 +1,138 @@
+@import './../../variables'
+
+.description
+	position: relative
+	&__docs
+		position: absolute
+		left: 50px
+		bottom: 10px
+
+	&__text:last-of-type
+		margin-bottom: 10px
+
+	&__link
+		text-align: left
+		min-width: 100%
+		color: $white
+
+		&:first-of-type
+			&::before
+				content: ''
+				position: absolute
+				width: 50px
+				height: 50px
+				display: block
+				background: center / contain no-repeat url('./../img/icons/info.svg'), $orange
+				background-size: 100%
+				border-radius: 50%
+				bottom: -7px
+				right: -10px
+		&:not(::first-of-type)
+			&::before
+				background-color: $orange
+
+		&.info-first
+			&::before
+				width: 40px
+				height: 40px
+				top: 140px
+				left: 50%
+				transform: translate(-50%, 0)
+				background-color: $yellow
+
+				@media screen and (min-width: 1024px)
+					width: 80px
+					height: 80px
+					top: 260px
+
+		&.info-second
+
+			&::before
+				width: 65px
+				height: 65px
+				padding: 5px
+				right: 10px
+				top: auto
+				bottom: 10px
+
+		&:focus::before
+			background-color: red
+
+	&__programme
+		min-height: 300px
+		min-width: 100%
+		display: grid
+		justify-items: center
+		text-align: left
+		position: relative
+		padding: 10px
+
+		@media screen and (min-width: 424px)
+			min-width: 280px
+
+		&::before
+			content: ''
+			width: 100px
+			height: 100px
+			background-color: $white
+			border-radius: 50%
+			display: block
+			margin-bottom: 20px
+			border: 5px solid $orange
+
+			@media screen and (min-width: 1024px)
+				width: 150px
+				height: 150px
+
+	&:first-of-type
+		.description__programme
+			&::before
+				background: center / contain no-repeat url('../img/icons/gifs/books.gif'), $white
+				background-size: 100%
+				border: 5px solid $yellow
+				margin-bottom: 45px
+				width: 150px
+				height: 150px
+
+				@media screen and (min-width: 1024px)
+					min-width: inherit
+					min-height: inherit
+
+	.image2
+
+		&::before
+			background: center / contain no-repeat url('./../../img/icons/gifs/book.gif'), $white
+			background-size: 90%
+
+
+	&__mini
+		display: grid
+		gap: 10px
+
+		@media screen and (min-width: 1024px)
+			display: flex
+
+
+		.description__programme.image3
+			// background: linear-gradient(to top, $blue-035, $blue-A)
+			background: linear-gradient(to top, $green1, $green-03)
+
+			&:nth-of-type(2)
+				&::before
+					background: center / contain no-repeat url('./../../img/icons/gifs/globe-earth.gif'), $white
+
+
+			&:nth-of-type(3)
+				&::before
+					background: center / contain no-repeat url('./../../img/icons/gifs/microscope.gif'), $white
+
+			&::before
+				background: center / contain no-repeat url('./../../img/icons/gifs/chemistry.gif'), $white
+				background-size: 75%
+				border-radius: 0
+
+	&__inner
+		flex-basis: 70%
+		padding-right: 80px
+
+

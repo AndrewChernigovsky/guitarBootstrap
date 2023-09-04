@@ -1,0 +1,48 @@
+include ../mixins/mixin
+doctype html
+html(lang="en")
+	head
+		title #{titleName} - #{title}
+		meta(charset="UTF-8")
+		meta(name="viewport", content="width=device-width, initial-scale=1.0")
+		link(rel="stylesheet" href='../css/vendors.min.css')
+		link(rel="stylesheet", href='../css/styles.min.css')
+		link(rel="shortcut icon" href="https://d3ki9tyy5l5ruj.cloudfront.net/obj/df5bcec7e9873dddebdd1328901c287f0f069750/asana-logo-favicon@3x.png")
+		script(src=`${nameScriptVendors}` type='module' defer)
+	body
+		noscript
+			div(style="min-width: 100%; min-height:100%; background-color: white; position: fixed; z-index: 100; display: flex; align-items: center; justify-content: center; flex-direction: column;")
+				h1(style="color: black; font-size:60px;") Включите пожалуйста Javascript
+				p(style="color: black; font-size:40px;") Ваш браузер устарел, установите последнию версию
+				a(href="https://www.google.com/intl/ru/chrome/update/")
+					span(style="display:block; width:160px; height:160px;  background-position: 0px -320px; background-image: url('https://sun9-64.userapi.com/z-b3Lt-FUb8UfMl209s1EB_0Colx6SjgM8ss9g/NTQrhHbDN2g.png');")
+					span(style="color: black; font-size:40px;") Chrome
+		.container
+			block header
+
+			main.main.visually-hidden(style="display: flex;")
+				block main
+					img(src='../img/futureIsNear/cart.svg' width='100' height='100')
+					img(src='../img/futureIsNear/favorites.svg' width='100' height='100')
+					img(src='../img/futureIsNear/login.svg' width='100' height='100')
+					img(src='../img/futureIsNear/next.svg' width='100' height='100')
+					img(src='../img/futureIsNear/orders.svg' width='100' height='100')
+					img(src='../img/futureIsNear/search.svg' width='100' height='100')
+					img(src='../img/futureIsNear/vercel.svg' width='100' height='100')
+					img(src='../img/futureIsNear/airplane.png' width='100' height='100')
+					img(src='../img/futureIsNear/auth.png' width='100' height='100')
+					img(src='../img/futureIsNear/avatar.png' width='100' height='100')
+					img(src='../img/futureIsNear/brand.png' width='100' height='100')
+					img(src='../img/futureIsNear/childsGoods.png' width='100' height='100')
+					img(src='../img/futureIsNear/clothes.png' width='100' height='100')
+					img(src='../img/futureIsNear/credit-card.png' width='100' height='100')
+					img(src='../img/futureIsNear/electronics.png' width='100' height='100')
+					img(src='../img/futureIsNear/food.png' width='100' height='100')
+					img(src='../img/futureIsNear/plant.png' width='100' height='100')
+					img(src='../img/futureIsNear/premium.png' width='100' height='100')
+					img(src='../img/futureIsNear/products.png' width='100' height='100')
+					img(src='../img/futureIsNear/stocks.png' width='100' height='100')
+					img(src='../img/futureIsNear/ticket.png' width='100' height='100')
+			block footer
+	block scripts
+		script(src='../js/script.min.js' type='module')

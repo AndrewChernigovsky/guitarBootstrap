@@ -1,0 +1,59 @@
+@import './../../variables'
+
+@mixin primary-text
+	color: $white
+	text-shadow: 2px 2px 2px $orange
+
+@mixin primary-title-media
+	@media screen and (min-width: $phone-md)
+		font-size: 28px
+		line-height: 28px
+
+	@media screen and (min-width: $medium-size)
+		font-size: 32px
+		line-height: 38px
+
+	@media screen and (min-width: $large-size)
+		font-size: 42px
+		line-height: 78px
+
+@mixin secondary-text-media
+	@media screen and (min-width: $phone-md)
+		font-size: 16px
+		line-height: 28px
+
+	@media screen and (min-width: $medium-size)
+		font-size: 18px
+		line-height: 32px
+
+	@media screen and (min-width: $large-size)
+		font-size: 26px
+		line-height: 34px
+
+@mixin secondary-title-media
+	@media screen and (min-width: $phone-md)
+		font-size: 22px
+		line-height: 24px
+
+	@media screen and (min-width: $medium-size)
+		font-size: 26px
+		line-height: 28px
+
+	@media screen and (min-width: $large-size)
+		font-size: 32px
+		line-height: 34px
+
+@mixin states
+	transition: 0.3s ease-in-out
+	border: 1px solid transparent
+	&:hover
+		opacity: 0.6
+	&:active
+		color: $blue
+		opacity: 1
+	&:visited
+		outline: none
+		color: $blue
+	&:focus
+		outline: none
+		border: 1px solid $white

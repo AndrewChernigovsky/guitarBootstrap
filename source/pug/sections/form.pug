@@ -1,0 +1,45 @@
+section.section.form-section
+	h2.secondary-title.form-section__title Записаться
+	.form-section__wrapper
+		.form-section__inner
+			form.form(action="" method="post")
+				fieldset.form__fieldset.personal
+					legend.form__legend Личные данные
+					label.form__label
+						| Ваше полное имя
+						input.form__input(type="text" placeholder="Иванов Иван Иванович" required)
+					label.form__label
+						| Ваш e-mail
+						input.form__input(type="email" placeholder="emailexample@gmail.com" required)
+					label.form__label
+						| Ваш телефон
+						input.form__input(type="phone" placeholder="+79432321221" required)
+				fieldset.form__fieldset.radio
+					legend.form__legend Предпочитаемый вид связи
+					input.form__input(type="radio" name="callback" id='callback-phone' checked)
+					label.form__label(for='callback-phone') Позвонить по телефону
+					input.form__input(type="radio" name="callback" id='callback-email')
+					label.form__label(for='callback-email') Написать на почту
+					input.form__input(type="radio" name="callback" id='callback-email1')
+					label.form__label(for='callback-email1') Отправить голубем
+
+				fieldset.form__fieldset.docs
+					legend.form__legend Документы
+					label.form__label.file
+						span Загрузите архивом список требуемых документов
+							a.link(href="")
+								i посмотреть перечень
+						input.form__input(type="file")
+						span.input-file-btn Выберите файл
+						span.input-file-text
+							strong
+								i Максимум 10мб
+				fieldset.form__fieldset
+					legend.form__legend Задать вопрос
+					textarea(name="", cols="30", rows="10" maxlength="330").form__textarea
+					span(id='textareaSymbolsMax') Максимальное количество символов:
+						span  330
+				.form__buttons
+					//- button(type="reset").button.form-section__button-reset Сбросить
+					.wrap
+						button(type="submit").button.form-section__button-submit Отправить

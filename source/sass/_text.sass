@@ -1,0 +1,47 @@
+@import "variables"
+@import "mixins/text/text"
+
+.primary-title,
+.secondary-title,
+.third-title,
+.fourth-title
+	font-weight: 700
+	color: black
+
+.primary-title
+	font-size: 16px
+	line-height: 20px
+	color: $black
+	@include primary-title-media
+
+.secondary-title
+	font-size: 30px
+	line-height: 36px
+	color: $black
+	@include secondary-title-media
+
+.third-title
+	font-size: 24px
+	line-height: 28px
+
+.fourth-title
+	font-size: 20px
+	line-height: 24px
+
+.base-text,
+.base-text-small
+	font-weight: 400
+
+.base-text
+	font-size: 16px
+	line-height: 22px
+	text-shadow: 2px 2px 2px $black
+
+.base-text-small
+	font-size: 16px
+	line-height: 21px
+
+.secondary-text
+	font-size: 16px
+	line-height: 22px
+	@include secondary-text-media

@@ -1,0 +1,142 @@
+@import 'variables'
+@import './../../mixins/text/text'
+
+.navigation
+	min-width: 100%
+	min-height: 50px
+	padding: 10px 20px
+	position: relative
+
+	.button-menu
+		width: 40px
+		height: 40px
+		border-radius: 50%
+		border: none
+		position: absolute
+		top: 0
+		left: -20px
+		background-color: transparent
+		z-index: 13
+		cursor: pointer
+
+		@media screen and (min-width: 768px)
+			display: none
+
+	&__list
+		list-style-type: none
+		display: grid
+		margin: 30% auto 0 auto
+		max-width: 80%
+		text-align: center
+
+		@media screen and (min-width: 768px)
+			display: flex
+			justify-content: center
+			text-align: center
+			flex-wrap: wrap
+			margin: 0 auto
+
+		&-item
+			&:not(:last-of-type)
+				margin-right: 10px
+
+		&-link
+			text-decoration: none
+			font-size: 18px
+			line-height: 20px
+			@include primary-text
+			@include states
+			@media screen and (min-width: 768px)
+				font-size: 22px
+				line-height: 24px
+			@media screen and (min-width: 1024px)
+				font-size: 24px
+				line-height: 28px
+			&.base-text
+				color: $white
+
+.navigation.no-js
+	.button-menu
+		&::after
+			content: ''
+			position: absolute
+			background-color: $white
+			width: 20px
+			height: 2px
+			box-shadow: 0 8px 0 $white, 0 -8px 0 $white
+
+		&:hover
+			opacity: 0.8
+	.navigation__wrapper
+		display: block
+		position: fixed
+		top: 50%
+		left: -100%
+		transform: translate(-50%, -50%)
+		transition: 0.6s ease-in-out
+		min-width: 100%
+		min-height: 100%
+		z-index: 12
+		background: linear-gradient($green-06, $green)
+
+		ul
+			display: grid
+			gap: 10px
+
+		@media screen and (min-width: 768px)
+			display: block
+			position: static
+			transform: translate(0,0)
+			background: $transparent
+
+			ul
+				display: flex
+				max-width: 100%
+
+.navigation.js-active-open
+
+	.button-menu
+		position: fixed
+		min-height: 100vh
+		min-width: 30%
+		transition: 0.6s ease-in-out
+
+		&::before,
+		&::after
+			left: 30px
+			top: 20px
+			content: ''
+			position: absolute
+			background-color: $white
+			width: 20px
+			height: 2px
+			z-index: 23
+			transition: 0.3s ease-in-out
+		&::before
+			transform: rotate(-45deg)
+
+		&::after
+			transform: rotate(45deg)
+
+		&:hover
+			opacity: 0.3
+			transition: 0.6s ease-in-out
+
+	.navigation__wrapper
+		display: block
+		position: fixed
+		z-index: 12
+		background-color: $green
+		padding: 20px
+		min-width: 100%
+		min-height: 100%
+		top: 50%
+		left: 50%
+		transform: translate(-50%, -50%)
+		transition: 0.6s ease-in-out
+		overflow-y: scroll
+		background: linear-gradient($green-06, $green)
+
+		ul
+			display: grid
+			gap: 10px
